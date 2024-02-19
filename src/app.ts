@@ -8,7 +8,7 @@ import showBanner from "node-banner";
 const displayGameTitleAndTagline = async () => {
   await showBanner(
     "Number Guessing Game",
-    `\tSIMPLE NUMBER GUESSING GAME WRITTEN IN TYPESCRIPT/NODE.JS
+    `\tCLI NUMBER GUESSING GAME WRITTEN IN TYPESCRIPT/NODE.JS
         _________________________________________________________
      \n`,
     "green",
@@ -54,7 +54,7 @@ const promptUserToGuessNum = async () => {
 };
 
 // function to prompt user to continue game or exit
-const promptUserToContinue = async () => {
+const promptUserToPlayAgain = async () => {
   const userAns = await inquirer.prompt({
     name: "continueOrNot",
     type: "list",
@@ -73,7 +73,5 @@ const promptUserToContinue = async () => {
 const startGame = async () => {
   await displayGameTitleAndTagline();
   await promptUserToGuessNum();
-  promptUserToContinue();
+  promptUserToPlayAgain();
 };
-
-startGame();
