@@ -5,7 +5,7 @@ export const displayGameTitleAndTagline = async () => {
   await showBanner(
     "Number Guessing Game",
     `\tCLI NUMBER GUESSING GAME WRITTEN IN TYPESCRIPT/NODE.JS
-        _____________________________________________________
+        ______________________________________________________
        \n`,
     "green",
     "gray"

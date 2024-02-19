@@ -1,7 +1,7 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 import showBanner from "node-banner";
-import { startGame } from "./app.js";
+import { start } from "./app.js";
 
 // function to prompt user to play again or quit
 export const promptUserToPlayAgain = async () => {
@@ -13,7 +13,7 @@ export const promptUserToPlayAgain = async () => {
   });
   const userAnswer = userAns.continueOrNot;
   if (userAnswer === "Play again") {
-    startGame();
+    start();
   } else {
     console.clear();
     await showBanner(`Thanks for playing !`, undefined, "green");
