@@ -10,9 +10,12 @@ const sleep = async (): Promise<void> => {
 
 // function that animates a spinner with a message for 3 seconds
 export const startingGame = async () => {
-  const spinner = createSpinner(
-    chalk.green(` Starting Number Guessing Game`)
+  console.log(
+    chalk.red(
+      ` Discover your results after 10 rounds of the number guessing game!`
+    )
   );
+  const spinner = createSpinner(chalk.green(` Starting Number Guessing Game`));
   spinner.start();
   await sleep();
   spinner.stop();
