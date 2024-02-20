@@ -8,8 +8,8 @@ import { promptUserToPlayAgain } from "./playAgain.js";
 export const start = async () => {
   await startingGame();
   await displayGameTitleAndTagline();
-  // await promptUserToGuessNum();
-  // promptUserToPlayAgain();
+  await promptUserToGuessNum();
+  promptUserToPlayAgain();
 };
 
 start();
