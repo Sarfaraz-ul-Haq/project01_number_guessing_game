@@ -11,7 +11,9 @@ export const promptUserToPlayAgain = async () => {
     choices: ["Play again", "Quit"],
     message: chalk.green("Select an option"),
   });
+
   const userAnswer = userAns.continueOrNot;
+
   if (userAnswer === "Play again") {
     start();
   } else {
